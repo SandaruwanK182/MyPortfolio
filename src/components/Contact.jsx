@@ -39,6 +39,13 @@ const Contact = () => {
       color: 'from-red-500 to-pink-500'
     },
     {
+      icon: MessageCircle,
+      label: 'WhatsApp',
+      value: '+94 72 314 6364',
+      href: 'https://wa.me/94723146364',
+      color: 'from-green-500 to-green-600'
+    },
+    {
       icon: Github,
       label: 'GitHub',
       value: 'github.com/sandaruwan',

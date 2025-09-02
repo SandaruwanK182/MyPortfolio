@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion';
-import { Calendar, Mail, MapPin, Heart, User, Users } from 'lucide-react';
+import { Calendar, Mail, MapPin, Heart, User, Users, Globe, GraduationCap } from 'lucide-react';
 
 const About = () => {
   const personalInfo = [
     { icon: User, label: 'Name', value: 'M.A.G. Sandaruwan Kumara Wickramasingha.' },
     { icon: Calendar, label: 'Date of Birth', value: '21 March 2002' },
     { icon: Mail, label: 'Email', value: 'sandaruwank182@gmail.com' },
+    { icon: Globe, label: 'Country', value: 'Sri Lanka' },
     { icon: MapPin, label: 'Nationality', value: 'Sinhala' },
     { icon: Heart, label: 'Religion', value: 'Buddhist' },
     { icon: Users, label: 'Civil Status', value: 'Unmarried' },
+    { icon: GraduationCap, label: 'University', value: 'Open University of Sri Lanka' },
   ];
 
   return (
