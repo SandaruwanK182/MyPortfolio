@@ -231,7 +231,7 @@ const Contact = () => {
               <h4 className="text-white font-semibold mb-2">Response Time</h4>
               <p className="text-gray-300 text-sm">
                 I typically respond to messages within 24 hours. For urgent matters, 
-                feel free to reach out via email directly.   hi
+                feel free to reach out via email directly.   hi Sandaruwan
               </p>
             </motion.div>
           </motion.div>
