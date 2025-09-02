@@ -60,7 +60,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('home')}
             >
               <h1 className="text-xl font-bold gradient-text">
-                Sandaruwan
+                SandaruwanK
               </h1>
             </motion.div>
 
