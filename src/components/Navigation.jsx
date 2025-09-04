@@ -138,10 +138,10 @@ const Navigation = () => {
               {/* Brand Text */}
               <div className="flex flex-col">
                 <h1 className="text-lg font-bold gradient-text leading-tight">
-                  Sandaruwan
+                  SandaruwanK
                 </h1>
                 <span className="text-xs text-gray-400 leading-tight">
-                  Backend Dev
+                  Software Engineer
                 </span>
               </div>
             </motion.div>

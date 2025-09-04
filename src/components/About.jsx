@@ -61,7 +61,7 @@ const About = () => {
               >
                 <div className="relative">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=320&h=384&q=80"
+                    src="public\myimage.png"
                     alt="M.A.G. Sandaruwan"
                     className="w-80 h-96 rounded-2xl object-cover shadow-2xl ring-2 ring-blue-500/30 group-hover:ring-blue-400/50 transition-all duration-500"
                     onError={(e) => {

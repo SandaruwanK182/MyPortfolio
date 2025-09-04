@@ -22,7 +22,7 @@ const Hero = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/IMG-20250212-WA0063.jpg')`
+            backgroundImage: `url('/galle.jpg')`
           }}
         />
         
@@ -75,7 +75,7 @@ const Hero = () => {
                   </span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-gray-300 font-medium">
-                  Backend Developer | Java | APIs | Databases
+                  Software Engineer | Backend Developer | Java | APIs | Databases
                 </p>
               </motion.div>
 
