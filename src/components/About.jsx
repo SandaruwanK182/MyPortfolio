@@ -61,7 +61,7 @@ const About = () => {
               >
                 <div className="relative">
                   <img
-                    src="public\myimage.png"
+                    src="/myimage.png"
                     alt="M.A.G. Sandaruwan"
                     className="w-80 h-96 rounded-2xl object-cover shadow-2xl ring-2 ring-blue-500/30 group-hover:ring-blue-400/50 transition-all duration-500"
                     onError={(e) => {
