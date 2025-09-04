@@ -53,15 +53,97 @@ const Navigation = () => {
       >
         <div className="section-padding">
           <div className="flex items-center justify-between py-4">
-            {/* Logo */}
+            {/* Modern Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="cursor-pointer"
+              className="cursor-pointer flex items-center gap-3"
               onClick={() => scrollToSection('home')}
             >
-              <h1 className="text-xl font-bold gradient-text">
-                SandaruwanK
-              </h1>
+              {/* Modern SVG Logo */}
+              <div className="relative">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="transition-all duration-300"
+                >
+                  {/* Outer Ring */}
+                  <circle
+                    cx="20"
+                    cy="20"
+                    r="18"
+                    stroke="url(#logoGradient)"
+                    strokeWidth="2"
+                    fill="none"
+                    className="animate-pulse"
+                  />
+                  
+                  {/* Inner Hexagon */}
+                  <path
+                    d="M20 6L30 12V28L20 34L10 28V12L20 6Z"
+                    fill="url(#logoGradient)"
+                    opacity="0.2"
+                  />
+                  
+                  {/* Center Dot */}
+                  <circle
+                    cx="20"
+                    cy="20"
+                    r="3"
+                    fill="url(#logoGradient)"
+                  />
+                  
+                  {/* Tech Lines */}
+                  <line
+                    x1="12"
+                    y1="20"
+                    x2="28"
+                    y2="20"
+                    stroke="url(#logoGradient)"
+                    strokeWidth="2"
+                    opacity="0.6"
+                  />
+                  <line
+                    x1="20"
+                    y1="12"
+                    x2="20"
+                    y2="28"
+                    stroke="url(#logoGradient)"
+                    strokeWidth="2"
+                    opacity="0.6"
+                  />
+                  
+                  {/* Gradient Definition */}
+                  <defs>
+                    <linearGradient
+                      id="logoGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stopColor="#06b6d4" />
+                      <stop offset="50%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#8b5cf6" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full blur-md opacity-20 animate-pulse" />
+              </div>
+              
+              {/* Brand Text */}
+              <div className="flex flex-col">
+                <h1 className="text-lg font-bold gradient-text leading-tight">
+                  Sandaruwan
+                </h1>
+                <span className="text-xs text-gray-400 leading-tight">
+                  Backend Dev
+                </span>
+              </div>
             </motion.div>
 
             {/* Desktop Menu */}
