@@ -125,127 +125,68 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-12">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              whileHover={{ 
-                scale: 1.05, 
-                rotateY: 5,
-                boxShadow: "0 25px 50px -12px rgba(0, 255, 255, 0.25)"
-              }}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
-              className="glassmorphism p-8 glow-card relative overflow-hidden"
+              className="space-y-6"
             >
-              {/* Card background animation */}
-              <motion.div
-                animate={{
-                  background: [
-                    "radial-gradient(circle at 0% 0%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)",
-                    "radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.1) 0%, transparent 50%)",
-                    "radial-gradient(circle at 0% 0%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)"
-                  ]
-                }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 opacity-50"
-              />
-              
-              <div className="relative z-10">
-                <motion.div 
-                  className="flex items-center space-x-3 mb-6"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <motion.div 
-                    className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl"
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <category.icon className="w-6 h-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
-                </motion.div>
+              {/* Category Header */}
+              <motion.div 
+                className="flex items-center space-x-4 mb-8"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.2 + 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="p-3 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500">
+                  <category.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+              </motion.div>
 
-              <div className="space-y-4">
+              {/* Skills Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
-                    initial={{ opacity: 0, x: -30, scale: 0.9 }}
-                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     whileHover={{ 
-                      x: 10, 
-                      scale: 1.02,
-                      backgroundColor: "rgba(6, 182, 212, 0.1)"
+                      scale: 1.05,
+                      y: -5,
+                      boxShadow: "0 20px 40px -12px rgba(6, 182, 212, 0.3)"
                     }}
                     transition={{ 
                       duration: 0.6, 
-                      delay: categoryIndex * 0.1 + skillIndex * 0.1 
+                      delay: categoryIndex * 0.2 + skillIndex * 0.1 
                     }}
                     viewport={{ once: true }}
-                    className="space-y-2 p-3 rounded-lg transition-all duration-300"
+                    className="group relative bg-slate-800/50 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300"
                   >
-                    <motion.div 
-                      className="flex items-center justify-between"
-                      whileHover={{ x: 5 }}
-                    >
-                      <div className="flex items-center space-x-3">
-                        <motion.span 
-                          className="text-2xl"
-                          whileHover={{ scale: 1.3, rotate: 10 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          {skill.icon}
-                        </motion.span>
-                        <span className="text-white font-medium">{skill.name}</span>
-                      </div>
-                      <motion.span 
-                        className="text-cyan-400 font-semibold"
-                        animate={{ 
-                          textShadow: [
-                            "0 0 0px rgba(6, 182, 212, 0.5)",
-                            "0 0 20px rgba(6, 182, 212, 0.8)",
-                            "0 0 0px rgba(6, 182, 212, 0.5)"
-                          ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        {skill.level}%
-                      </motion.span>
-                    </motion.div>
-                    
-                    {/* Enhanced Progress Bar */}
-                    <div className="relative w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                    {/* Skill Icon */}
+                    <div className="flex flex-col items-center text-center space-y-3">
                       <motion.div
-                        initial={{ width: 0, x: '-100%' }}
-                        whileInView={{ width: `${skill.level}%`, x: 0 }}
-                        transition={{ 
-                          duration: 1.2, 
-                          delay: categoryIndex * 0.1 + skillIndex * 0.1,
-                          ease: "easeOut"
-                        }}
-                        viewport={{ once: true }}
-                        className="relative bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full overflow-hidden"
+                        className="w-12 h-12 flex items-center justify-center bg-slate-700/50 rounded-xl group-hover:bg-gradient-to-r group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300"
+                        whileHover={{ rotate: 10 }}
                       >
-                        {/* Animated shine effect */}
-                        <motion.div
-                          animate={{
-                            x: ['-100%', '200%']
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            delay: categoryIndex * 0.1 + skillIndex * 0.1 + 1
-                          }}
-                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform skew-x-12"
-                        />
+                        <span className="text-2xl">{skill.icon}</span>
                       </motion.div>
+                      
+                      {/* Skill Name */}
+                      <h4 className="text-white font-medium text-sm leading-tight">
+                        {skill.name}
+                      </h4>
                     </div>
+
+                    {/* Hover Glow Effect */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </motion.div>
                 ))}
-              </div>
               </div>
             </motion.div>
           ))}

@@ -276,9 +276,9 @@ const Footer = () => {
             {/* Transparent Tech Stack */}
             <div className="backdrop-blur-sm rounded-xl px-5 py-3 bg-white/5 hover:bg-white/10 transition-all duration-300">
               <p className="text-white/80 text-xs drop-shadow">
-                • <span className="text-cyan-400 font-medium">React</span> • 
-                <span className="text-cyan-400 font-medium"> Tailwind</span> • 
-                <span className="text-cyan-400 font-medium"> Framer Motion</span>
+                • <span className="text-cyan-400 font-medium">Softwre Engineer</span> • 
+                <span className="text-cyan-400 font-medium"> Backend Developer</span> • 
+                <span className="text-cyan-400 font-medium"> Java</span>
               </p>
             </div>
           </div>
