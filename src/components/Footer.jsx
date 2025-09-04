@@ -191,11 +191,11 @@ const Footer = () => {
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="flex justify-between bg-white/5 rounded p-2 backdrop-blur-sm">
                   <span className="text-white/70">Projects:</span>
-                  <span className="text-cyan-400 font-semibold">25+</span>
+                  <span className="text-cyan-400 font-semibold">5</span>
                 </div>
                 <div className="flex justify-between bg-white/5 rounded p-2 backdrop-blur-sm">
                   <span className="text-white/70">Experience:</span>
-                  <span className="text-cyan-400 font-semibold">3+ years</span>
+                  <span className="text-cyan-400 font-semibold">0 years</span>
                 </div>
                 <div className="flex justify-between bg-white/5 rounded p-2 backdrop-blur-sm">
                   <span className="text-white/70">Tech Stack:</span>
@@ -203,7 +203,7 @@ const Footer = () => {
                 </div>
                 <div className="flex justify-between bg-white/5 rounded p-2 backdrop-blur-sm">
                   <span className="text-white/70">Clients:</span>
-                  <span className="text-cyan-400 font-semibold">15+</span>
+                  <span className="text-cyan-400 font-semibold">5+</span>
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@ const Footer = () => {
             {/* Transparent Tech Stack */}
             <div className="backdrop-blur-sm rounded-xl px-5 py-3 bg-white/5 hover:bg-white/10 transition-all duration-300">
               <p className="text-white/80 text-xs drop-shadow">
-                <span className="text-cyan-400 font-medium">React</span> • 
+                • <span className="text-cyan-400 font-medium">React</span> • 
                 <span className="text-cyan-400 font-medium"> Tailwind</span> • 
                 <span className="text-cyan-400 font-medium"> Framer Motion</span>
               </p>
